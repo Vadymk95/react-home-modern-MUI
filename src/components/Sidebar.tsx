@@ -2,8 +2,15 @@ import { FC } from 'react';
 import { Stack } from '@mui/material';
 import { categories } from '../utils/constants';
 
-export const Sidebar: FC = () => {
-  const selectedCategory = 'New';
+interface ISidebarProps {
+  selectedCategory: string;
+  setSelectedCategory: (name: string) => void;
+}
+
+export const Sidebar: FC<ISidebarProps> = ({
+  selectedCategory,
+  setSelectedCategory,
+}) => {
   return (
     <Stack
       direction="row"
@@ -15,6 +22,7 @@ export const Sidebar: FC = () => {
     >
       {categories.map((category) => (
         <button
+          onClick={() => setSelectedCategory(category.name)}
           key={category.name}
           className="category-btn"
           style={{
