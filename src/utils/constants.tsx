@@ -11,10 +11,16 @@ import GraphicEqIcon from '@mui/icons-material/GraphicEq';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
+import { ReactElement } from 'react';
 
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
-export const categories = [
+interface ICategories {
+  name: string;
+  icon: ReactElement;
+}
+
+export const categories: ICategories[] = [
   { name: 'New', icon: <HomeIcon /> },
   { name: 'JS Mastery', icon: <CodeIcon /> },
   { name: 'Coding', icon: <CodeIcon /> },

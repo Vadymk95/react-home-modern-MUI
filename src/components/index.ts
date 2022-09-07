@@ -4,3 +4,4 @@ export { SearchFeed } from './SearchFeed';
 export { VideoDetail } from './VideoDetail';
 export { ChannelDetail } from './ChannelDetail';
 export { SearchBar } from './SearchBar';
+export { Sidebar } from './Sidebar';
